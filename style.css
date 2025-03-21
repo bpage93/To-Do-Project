@@ -1,0 +1,384 @@
+/* :root {
+
+    --background: #101114;
+    --primary-color: #1C1D20;
+    --secondary-color: #4A4D57;
+    --accent-color: #00FFC4;
+    --text-color: #F9F9F9;
+}
+
+
+
+.material-symbols-outlined {
+    font-size: 24px; 
+    color: var(--text-color); 
+    vertical-align: middle;
+}
+
+
+.custom-checkbox .material-symbols-outlined {
+    color: var(--accent-color); 
+}
+
+
+#delete-button .material-symbols-outlined {
+    color: red; 
+    transition: color 0.3s ease;
+}
+
+#delete-button:hover .material-symbols-outlined {
+    color: darkred; 
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.wapper {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#todo-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1000px;
+    font: inherit;
+    color: black;
+    caret-color: var(--accent-color);;
+}
+
+form {
+    position: relative;
+}
+
+#add-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    background-color: var(--accent-color);
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--background);
+    cursor: pointer;
+}
+
+#add-button:hover {
+    background-color: var(--accent-color);
+}
+
+
+
+button:hover {
+    background: rgb(191, 78, 78);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo .todo-text {
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+
+.todo button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.todo label {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+
+.custom-checkbox .material-symbols-outlined {
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    width: 20px; 
+    height: 20px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+    color: transparent; 
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label .material-symbols-outlined {
+    background-color: var(--accent-color);
+    color: var(--background);
+}
+
+input[type="checkbox"]:checked + .custom-checkbox + .todo-text {
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
+
+
+
+#delete-button .material-symbols-outlined {
+    color: red; 
+    transition: color 0.3s ease;
+}
+
+#delete-button:hover .material-symbols-outlined {
+    color: darkred; 
+}
+
+@media(max-width: 500px) {
+    html{
+        font-size: 12pt;
+    }
+    #add-button{
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+    h1{
+        margin: 50px;
+        font-size: 15vw;
+    }
+} */
+
+:root {
+    --background: #101114;
+    --primary-color: #1C1D20;
+    --secondary-color: #4A4D57;
+    --accent-color: #00FFC4;
+    --text-color: #F9F9F9;
+}
+
+.material-symbols-outlined {
+    font-size: 24px;
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.custom-checkbox .material-symbols-outlined {
+    color: var(--accent-color);
+}
+
+#delete-button .material-symbols-outlined {
+    color: red;
+    transition: color 0.3s ease;
+}
+
+#delete-button:hover .material-symbols-outlined {
+    color: darkred;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lists-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.list-container {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#add-list-button {
+    margin-bottom: 20px;
+}
+
+/* Existing styles for todo items */
+#todo-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1000px;
+    font: inherit;
+    color: black;
+    caret-color: var(--accent-color);
+}
+
+.list-container form {
+    position: relative;
+}
+
+.list-container #add-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: var(--accent-color);
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--background);
+    cursor: pointer;
+}
+
+.list-container #add-button:hover {
+    background-color: var(--accent-color);
+}
+
+.list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-container .todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-container .todo .todo-text {
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+
+.list-container .todo button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.list-container .todo label {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/* Checkbox styles */
+.list-container .custom-checkbox .material-symbols-outlined {
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: transparent;
+}
+
+.list-container input[type="checkbox"] {
+    display: none;
+}
+
+.list-container input[type="checkbox"]:checked + label .material-symbols-outlined {
+    background-color: var(--accent-color);
+    color: var(--background);
+}
+
+.list-container input[type="checkbox"]:checked + label + .todo-text {
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
+
+/* Delete button styles */
+.list-container .delete-button .material-symbols-outlined { /* changed to class selector */
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.list-container .delete-button:hover .material-symbols-outlined { /* changed to class selector */
+    color: darkred;
+}
+
+
+.list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.delete-list-button {
+    background-color: rgb(209, 133, 133);
+    border: none;
+    cursor: pointer;
+    color: red; /* Or any color you prefer */
+}
+
+.delete-list-button:hover {
+    color: darkred;
+}
+
+
+@media (max-width: 500px) {
+    html {
+        font-size: 12pt;
+    }
+
+    .list-container #add-button {
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+
+    h1 {
+        margin: 50px;
+        font-size: 15vw;
+    }
+}
